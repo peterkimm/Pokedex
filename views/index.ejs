@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Index</title>
+</head>
+<body>
+    <nav>Pokemon</nav>
+    <h1>Welcome To The World Of Pokemon</h1>
+    <ul>
+        <% for (let i=0; i < data.length-145; i++) { %>
+            <li>
+                <a href="/pokedex/<%= i %>">
+                    <%= data[i].name %>
+                    </a>
+                    <img src="<%=data[i].img%>">
+                
+            </li>
+            <% } %>
+    </ul>
+</body>
+</html>
