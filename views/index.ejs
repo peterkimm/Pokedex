@@ -7,18 +7,41 @@
     <title>Pokemon Index</title>
 </head>
 <body>
-    <nav>Pokemon</nav>
+    <nav>
+        <a href="/pokedex/new">Add Pokemon</a>
+    </nav>
     <h1>Welcome To The World Of Pokemon</h1>
-    <ul>
+    <div>
         <% for (let i=0; i < data.length-145; i++) { %>
-            <li>
+            
                 <a href="/pokedex/<%= i %>">
                     <%= data[i].name %>
                     </a>
                     <img src="<%=data[i].img%>">
-                
-            </li>
+                    <a href="/pokedex/<%=i; %>/edit">Edit</a>
+                    <form action="/pokedex/<%=i; %>?_method=DELETE" method="POST">
+                        <input type="submit" value="DELETE"/>
+                        </form>
+                    
+            
             <% } %>
-    </ul>
+    </div>
+
+    <style>
+        nav{
+            display: flex;
+            justify-content: center;
+            background-color: #87CEEB;
+            height: 70px;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            color: 	#87CEEB;
+        }
+        body {
+            background-color: #FFD580;
+        }
+    </style>
 </body>
 </html>

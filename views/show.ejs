@@ -1,34 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <nav>Pokemon Info <%=data.name%></nav>
+    <nav>
+        <%=data.name%>
+    </nav>
     <div>
         <img src="<%=data.img%>">
-        <p>ID: <%= data.id %></p>
+        <p>ID: <%=data.id%>
+        </p>
     </div>
     <div>
-        <p>Type: <%= data.type %></p>
+        <p>Type: <%=data.type%>
+        </p>
     </div>
     <div>
         <ul> Stats:
-                <li>
-                    Hp: <%= data.stats.hp %>
-                    Attack: <%= data.stats.attack %>
-                    Defense: <%= data.stats.defense %>
-                 </li>
+            <li>
+                Hp: <%=data.stats.hp%>
+                    Attack: <%=data.stats.attack%>
+                        Defense: <%=data.stats.defense%>
+            </li>
 
         </ul>
+    </div>
+    <div>
+
     </div>
 
 
 
 
     <a href="/pokedex">Back to Index</a>
+
+
+
+    <style>
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #87CEEB;
+            height: 70px;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            color: #87CEEB;
+        }
+
+        body {
+            background-color: #FFD580;
+        }
+    </style>
 </body>
+
 </html>
